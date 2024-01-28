@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Inter';
+  src: url(https://fonts.googleapis.com/css2?family=Inter);
+}
+
+body{
+  font-family: 'Inter',sans-serif;
+  width: 1440px;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
