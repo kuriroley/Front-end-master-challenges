@@ -1,6 +1,123 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter);
-
-*{
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
   margin: 0;
   padding: 0;
+  font: inherit;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+html,
+body{
+  height: 100%
+}
+/* imported font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* custom properties */
+:root{
+  --clr-primary-green: hsl(75, 94%, 57%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-grey: hsl(0, 0%, 20%);
+  --clr-neutral-dgrey: hsl(0, 0%, 12%);
+  --clr-neutral-off-black: hsl(0, 0%, 8%);
+
+
+  --ff-primary:'Inter', sans-serif;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700
+}
+
+/* general style */
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1444px;
+  min-width: 375px;
+  background-color: var(--clr-neutral-off-black);
+}
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-neutral-dgrey);
+  height: 560px;
+  min-width: 375px;
+  max-width: 1444px;
+  color: var(--clr-neutral-white);
+  border-radius: 20px;
+}
+
+.top-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.picture{
+  display: flex;
+  justify-content: center;
+}
+.picture img{
+  width: 50%;
+  border-radius: 50%;
+}
+.text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.elements{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.items{
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  background-color: var(--clr-neutral-grey);
+  border-radius: 3px;
 }
